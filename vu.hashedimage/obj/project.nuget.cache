@@ -1,0 +1,111 @@
+{
+  "version": 2,
+  "dgSpecHash": "RPo/ZSAac9A=",
+  "success": true,
+  "projectFilePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+  "expectedPackageFiles": [
+    "/home/lusa/.nuget/packages/coenm.imagesharp.imagehash/1.0.0/coenm.imagesharp.imagehash.1.0.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.entityframeworkcore/10.0.11/microsoft.entityframeworkcore.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.entityframeworkcore.abstractions/10.0.11/microsoft.entityframeworkcore.abstractions.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.entityframeworkcore.analyzers/10.0.11/microsoft.entityframeworkcore.analyzers.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.entityframeworkcore.relational/10.0.4/microsoft.entityframeworkcore.relational.10.0.4.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.caching.abstractions/10.0.11/microsoft.extensions.caching.abstractions.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.caching.memory/10.0.11/microsoft.extensions.caching.memory.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.4/microsoft.extensions.configuration.abstractions.10.0.4.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.11/microsoft.extensions.dependencyinjection.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.11/microsoft.extensions.dependencyinjection.abstractions.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.logging/10.0.11/microsoft.extensions.logging.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.11/microsoft.extensions.logging.abstractions.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.options/10.0.11/microsoft.extensions.options.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.primitives/10.0.11/microsoft.extensions.primitives.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/npgsql/10.0.3/npgsql.10.0.3.nupkg.sha512",
+    "/home/lusa/.nuget/packages/npgsql.entityframeworkcore.postgresql/10.0.3/npgsql.entityframeworkcore.postgresql.10.0.3.nupkg.sha512",
+    "/home/lusa/.nuget/packages/sixlabors.imagesharp/1.0.1/sixlabors.imagesharp.1.0.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 1.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-2cmq-823j-5qj8",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 1.0.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-5x7m-6737-26cr",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 1.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-63p8-c4ww-9cg7",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 1.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-65x7-c272-7g7r",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 1.0.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-g85r-6x2q-45w7",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 1.0.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-qxrv-gp6x-rc23",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 1.0.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-rxmq-m78w-7wmc",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}

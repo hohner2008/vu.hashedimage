@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vu.hashedimage", "vu.hashedimage\vu.hashedimage.csproj", "{958AFAE0-5DE1-46E2-8240-1DF8AF29547A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vu.gathering", "vu.gathering\vu.gathering.csproj", "{3AF43B19-BBF6-4442-A62A-23B2B7DDD217}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{958AFAE0-5DE1-46E2-8240-1DF8AF29547A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958AFAE0-5DE1-46E2-8240-1DF8AF29547A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958AFAE0-5DE1-46E2-8240-1DF8AF29547A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958AFAE0-5DE1-46E2-8240-1DF8AF29547A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF43B19-BBF6-4442-A62A-23B2B7DDD217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF43B19-BBF6-4442-A62A-23B2B7DDD217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF43B19-BBF6-4442-A62A-23B2B7DDD217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF43B19-BBF6-4442-A62A-23B2B7DDD217}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
