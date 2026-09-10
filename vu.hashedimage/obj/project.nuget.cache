@@ -1,26 +1,80 @@
 {
   "version": 2,
-  "dgSpecHash": "RPo/ZSAac9A=",
+  "dgSpecHash": "AxNyHpivI3w=",
   "success": true,
   "projectFilePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
   "expectedPackageFiles": [
     "/home/lusa/.nuget/packages/coenm.imagesharp.imagehash/1.0.0/coenm.imagesharp.imagehash.1.0.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore/2.3.10/microsoft.aspnetcore.2.3.10.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.1.1/microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.authentication.core/2.1.1/microsoft.aspnetcore.authentication.core.2.1.1.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.connections.abstractions/2.3.0/microsoft.aspnetcore.connections.abstractions.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.cryptography.internal/10.0.8/microsoft.aspnetcore.cryptography.internal.10.0.8.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.dataprotection/10.0.8/microsoft.aspnetcore.dataprotection.10.0.8.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.dataprotection.abstractions/10.0.8/microsoft.aspnetcore.dataprotection.abstractions.10.0.8.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.diagnostics/2.3.9/microsoft.aspnetcore.diagnostics.2.3.9.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.diagnostics.abstractions/2.3.0/microsoft.aspnetcore.diagnostics.abstractions.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.hostfiltering/2.3.9/microsoft.aspnetcore.hostfiltering.2.3.9.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.hosting/2.3.9/microsoft.aspnetcore.hosting.2.3.9.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.hosting.abstractions/2.3.0/microsoft.aspnetcore.hosting.abstractions.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.hosting.server.abstractions/2.3.0/microsoft.aspnetcore.hosting.server.abstractions.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.http/2.3.0/microsoft.aspnetcore.http.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.3.0/microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.http.extensions/2.3.0/microsoft.aspnetcore.http.extensions.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.http.features/2.3.0/microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.httpoverrides/2.1.1/microsoft.aspnetcore.httpoverrides.2.1.1.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.routing/2.3.9/microsoft.aspnetcore.routing.2.3.9.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.routing.abstractions/2.3.0/microsoft.aspnetcore.routing.abstractions.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.server.iisintegration/2.1.7/microsoft.aspnetcore.server.iisintegration.2.1.7.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.server.kestrel/2.3.9/microsoft.aspnetcore.server.kestrel.2.3.9.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.server.kestrel.core/2.3.8/microsoft.aspnetcore.server.kestrel.core.2.3.8.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.server.kestrel.https/2.3.9/microsoft.aspnetcore.server.kestrel.https.2.3.9.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.server.kestrel.transport.abstractions/2.3.0/microsoft.aspnetcore.server.kestrel.transport.abstractions.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.server.kestrel.transport.sockets/2.3.9/microsoft.aspnetcore.server.kestrel.transport.sockets.2.3.9.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.aspnetcore.webutilities/2.3.0/microsoft.aspnetcore.webutilities.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.entityframeworkcore/10.0.11/microsoft.entityframeworkcore.10.0.11.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.entityframeworkcore.abstractions/10.0.11/microsoft.entityframeworkcore.abstractions.10.0.11.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.entityframeworkcore.analyzers/10.0.11/microsoft.entityframeworkcore.analyzers.10.0.11.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.entityframeworkcore.relational/10.0.4/microsoft.entityframeworkcore.relational.10.0.4.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.extensions.caching.abstractions/10.0.11/microsoft.extensions.caching.abstractions.10.0.11.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.extensions.caching.memory/10.0.11/microsoft.extensions.caching.memory.10.0.11.nupkg.sha512",
-    "/home/lusa/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.4/microsoft.extensions.configuration.abstractions.10.0.4.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.configuration/10.0.7/microsoft.extensions.configuration.10.0.7.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.8/microsoft.extensions.configuration.abstractions.10.0.8.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.configuration.binder/10.0.7/microsoft.extensions.configuration.binder.10.0.7.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.configuration.commandline/8.0.0/microsoft.extensions.configuration.commandline.8.0.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.configuration.environmentvariables/8.0.0/microsoft.extensions.configuration.environmentvariables.8.0.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.configuration.fileextensions/8.0.1/microsoft.extensions.configuration.fileextensions.8.0.1.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.configuration.json/8.0.1/microsoft.extensions.configuration.json.8.0.1.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.configuration.usersecrets/8.0.1/microsoft.extensions.configuration.usersecrets.8.0.1.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.11/microsoft.extensions.dependencyinjection.10.0.11.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.11/microsoft.extensions.dependencyinjection.abstractions.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.diagnostics.abstractions/10.0.8/microsoft.extensions.diagnostics.abstractions.10.0.8.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.fileproviders.abstractions/10.0.8/microsoft.extensions.fileproviders.abstractions.10.0.8.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.fileproviders.physical/8.0.0/microsoft.extensions.fileproviders.physical.8.0.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.filesystemglobbing/8.0.0/microsoft.extensions.filesystemglobbing.8.0.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.hosting.abstractions/10.0.8/microsoft.extensions.hosting.abstractions.10.0.8.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.extensions.logging/10.0.11/microsoft.extensions.logging.10.0.11.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.11/microsoft.extensions.logging.abstractions.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.logging.configuration/10.0.7/microsoft.extensions.logging.configuration.10.0.7.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.logging.console/10.0.7/microsoft.extensions.logging.console.10.0.7.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.logging.debug/8.0.1/microsoft.extensions.logging.debug.8.0.1.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.objectpool/8.0.11/microsoft.extensions.objectpool.8.0.11.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.extensions.options/10.0.11/microsoft.extensions.options.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.extensions.options.configurationextensions/10.0.7/microsoft.extensions.options.configurationextensions.10.0.7.nupkg.sha512",
     "/home/lusa/.nuget/packages/microsoft.extensions.primitives/10.0.11/microsoft.extensions.primitives.10.0.11.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.net.http.headers/2.3.0/microsoft.net.http.headers.2.3.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/microsoft.playwright/1.61.0/microsoft.playwright.1.61.0.nupkg.sha512",
     "/home/lusa/.nuget/packages/npgsql/10.0.3/npgsql.10.0.3.nupkg.sha512",
     "/home/lusa/.nuget/packages/npgsql.entityframeworkcore.postgresql/10.0.3/npgsql.entityframeworkcore.postgresql.10.0.3.nupkg.sha512",
-    "/home/lusa/.nuget/packages/sixlabors.imagesharp/1.0.1/sixlabors.imagesharp.1.0.1.nupkg.sha512"
+    "/home/lusa/.nuget/packages/sixlabors.imagesharp/1.0.1/sixlabors.imagesharp.1.0.1.nupkg.sha512",
+    "/home/lusa/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/home/lusa/.nuget/packages/system.security.cryptography.pkcs/10.0.8/system.security.cryptography.pkcs.10.0.8.nupkg.sha512",
+    "/home/lusa/.nuget/packages/system.security.cryptography.xml/10.0.8/system.security.cryptography.xml.10.0.8.nupkg.sha512",
+    "/home/lusa/.nuget/packages/vusharp.core/0.2.1/vusharp.core.0.2.1.nupkg.sha512",
+    "/home/lusa/.nuget/packages/vusharp.task/0.0.1/vusharp.task.0.0.1.nupkg.sha512",
+    "/home/lusa/.nuget/packages/xunit.v3.common/3.2.2/xunit.v3.common.3.2.2.nupkg.sha512",
+    "/home/lusa/.nuget/packages/xunit.v3.extensibility.core/3.2.2/xunit.v3.extensibility.core.3.2.2.nupkg.sha512"
   ],
   "logs": [
     {
@@ -103,6 +157,66 @@
       "warningLevel": 1,
       "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
       "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 10.0.8 has a known high severity vulnerability, https://github.com/advisories/GHSA-23rf-6693-g89p",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 10.0.8 has a known high severity vulnerability, https://github.com/advisories/GHSA-8q5v-6pqq-x66h",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 10.0.8 has a known high severity vulnerability, https://github.com/advisories/GHSA-cvvh-rhrc-wg4q",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 10.0.8 has a known high severity vulnerability, https://github.com/advisories/GHSA-g8r8-53c2-pm3f",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 10.0.8 has a known high severity vulnerability, https://github.com/advisories/GHSA-mmjf-rqrv-855v",
+      "projectPath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/lusa/RiderProjects/vu.hashedimage/vu.hashedimage/vu.hashedimage.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
       ]
