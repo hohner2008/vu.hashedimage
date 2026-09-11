@@ -1,6 +1,6 @@
 ﻿using Microsoft.Playwright;
+using vu.core;
 
-Console.WriteLine("Hello, World!");
 
 String MainCaptchaGathering(IPage page)
 {
@@ -35,6 +35,32 @@ String MainCaptchaGathering(IPage page)
     string? image_url =  "https://" + url_base + attributeValue;
 
 
+    string script = @"
+        let row = document.createElement(""tr"");
+        let buttonCell1 = document.createElement(""td"");
+        let buttonCell2 = document.createElement(""td"");
+
+        let btn = document.createElement('button');
+        btn.innerHTML = 'GRAB';
+        btn.onclick = function() {
+            alert('Button clicked!');
+        };
+
+       let btn2 = document.createElement('button');
+        btn2.innerHTML = 'RESTART';
+        btn2.onclick = function() {
+            alert('Button clicked!');
+        };
+        buttonCell1.appendChild(btn);
+        buttonCell2.appendChild(btn2);
+        row.appendChild(buttonCell1);
+        row.appendChild(buttonCell2);
+
+        document.body.appendChild(row);
+    ";
+    page.EvaluateAsync(script).Wait();
+
+
     if (!string.IsNullOrEmpty(image_url))
     {
         // Если ссылка относительная, дополните её базовым URL страницы
@@ -46,19 +72,30 @@ String MainCaptchaGathering(IPage page)
     }
 
     
-    
-    var password = page.Locator("[type=\"password\"]").AllAsync().Result;
-    password[0].FillAsync("9020test").Wait();
-
-    var mail = page.Locator("[name=\"email\"]").AllAsync().Result;
-    mail[0].FocusAsync().Wait();
-    mail[0].FillAsync("test@test.com").Wait();
-    
-    var no_email = page.Locator("[name=\"noemail\"]").AllAsync().Result;
-    no_email[0].ClickAsync().Wait();
-    
-    var toChat = page.Locator("[name=\"OK\"]").AllAsync().Result;
-    toChat[0].ClickAsync().Wait();
 
     return "test";
 }
+
+Console.WriteLine("Initializing Playwright dependencies...");
+
+// 1. Programmatically install the necessary browser binaries (e.g., Chromium)
+// This replaces the manual "pwsh bin/Debug/net8.0/playwright.ps1 install" step.
+// It skips downloading if the binaries are already present.
+int exitCode = Microsoft.Playwright.Program.Main(new[] { "install", "firefox" });
+        
+if (exitCode != 0)
+{
+    Console.WriteLine($"Failed to install browser binaries. Exit code: {exitCode}");
+    return;
+}
+
+Console.WriteLine("Browsers successfully checked/installed.");
+
+//exitCode = Microsoft.Playwright.Program.Main(new[] { "install-deps"});
+
+
+var url = "https://bizarre.kiev.ua/";
+var crawler = new BaseCrawler(new Uri(url));
+crawler.SetMainFunction(MainCaptchaGathering);
+await crawler.RunBrowser(BaseCrawler.BrowserName.Firefox);
+Console.ReadLine();
