@@ -59,6 +59,9 @@ String MainCaptchaGathering(IPage page)
         document.body.appendChild(row);
     ";
     page.EvaluateAsync(script).Wait();
+    
+    var toChat = page.Locator("input.l[value='В ЧАТ!']").AllAsync().Result;
+    toChat[0].EvaluateAsync("el => el.remove()").Wait();
 
 
     if (!string.IsNullOrEmpty(image_url))
