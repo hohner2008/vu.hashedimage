@@ -56,7 +56,12 @@ String MainCaptchaGathering(IPage page)
         row.appendChild(buttonCell1);
         row.appendChild(buttonCell2);
 
-        document.body.appendChild(row);
+        const tbody = document.querySelector('tbody');
+        // Insert the new row at the very top of the tbody
+        tbody.insertBefore(row, tbody.firstChild);
+        //table.appendChild(row);
+
+        //document.appendChild(row);
     ";
     page.EvaluateAsync(script).Wait();
     
