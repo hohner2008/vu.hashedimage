@@ -67,8 +67,18 @@ String MainCaptchaGathering(IPage page)
     
     var toChat = page.Locator("input.l[value='В ЧАТ!']").AllAsync().Result;
     toChat[0].EvaluateAsync("el => el.remove()").Wait();
-
-
+    
+    var buttons = page.Locator("button").AllAsync().Result;
+    ILocator grab,restart;
+    foreach (var button in buttons)
+    {
+        string str = button.InnerTextAsync().Result;
+        if (str == "GRAB") grab = button;
+        else if (str == "RESTART") restart = button;
+    }
+    grab
+    
+    
     if (!string.IsNullOrEmpty(image_url))
     {
         // Если ссылка относительная, дополните её базовым URL страницы
