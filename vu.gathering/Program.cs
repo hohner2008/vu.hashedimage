@@ -36,20 +36,34 @@ String MainCaptchaGathering(IPage page)
 
 
     string script = @"
-        let row = document.createElement(""tr"");
-        let buttonCell1 = document.createElement(""td"");
-        let buttonCell2 = document.createElement(""td"");
+        let grab_clicked = false;
+        let restart_clicked = false;
+
+        let informer = document.createElement('i');
+        informer.id = 'informer';
+        
+        let row = document.createElement('tr');
+        let buttonCell1 = document.createElement('td');
+        let buttonCell2 = document.createElement('td');
 
         let btn = document.createElement('button');
         btn.innerHTML = 'GRAB';
         btn.onclick = function() {
-            alert('Button clicked!');
+            grab_clicked = true;
+            informer.innerText = 'grab_clicked';
+            row.appendChild(informer);
+            condition = false;
+            console.log(grab_clicked);
         };
 
        let btn2 = document.createElement('button');
         btn2.innerHTML = 'RESTART';
         btn2.onclick = function() {
-            alert('Button clicked!');
+            restart_clicked = true;
+            informer.innerText = 'restart_clicked';
+            row.appendChild(informer);
+            condition = false;
+            console.log(restart_clicked);
         };
         buttonCell1.appendChild(btn);
         buttonCell2.appendChild(btn2);
@@ -59,14 +73,13 @@ String MainCaptchaGathering(IPage page)
         const tbody = document.querySelector('body');
         // Insert the new row at the very top of the tbody
         tbody.insertBefore(row, tbody.firstChild);
-        //table.appendChild(row);
 
-        //document.appendChild(row);
+       
     ";
-    page.EvaluateAsync(script).Wait();
-    
-    var toChat = page.Locator("input.l[value='В ЧАТ!']").AllAsync().Result;
-    toChat[0].EvaluateAsync("el => el.remove()").Wait();
+       
+        page.EvaluateAsync(script).Wait();
+        var toChat = page.Locator("input.l[value='В ЧАТ!']").AllAsync().Result;
+        toChat[0].EvaluateAsync("el => el.remove()").Wait();
     
     var buttons = page.Locator("button").AllAsync().Result;
     ILocator grab,restart;
@@ -76,7 +89,6 @@ String MainCaptchaGathering(IPage page)
         if (str == "GRAB") grab = button;
         else if (str == "RESTART") restart = button;
     }
-    grab
     
     
     if (!string.IsNullOrEmpty(image_url))
