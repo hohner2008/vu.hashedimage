@@ -1,6 +1,14 @@
-﻿using Microsoft.Playwright;
+﻿using System.Runtime.CompilerServices;
+using Microsoft.Playwright;
 using vu.core;
 
+ILocator FindInformer(IPage page, string query)
+{
+    ILocator informer;
+    informer = page.Locator(query);
+    if ( informer is null ) FindInformer(page, query);
+    return informer;
+}
 
 String MainCaptchaGathering(IPage page)
 {
@@ -80,6 +88,17 @@ String MainCaptchaGathering(IPage page)
         page.EvaluateAsync(script).Wait();
         var toChat = page.Locator("input.l[value='В ЧАТ!']").AllAsync().Result;
         toChat[0].EvaluateAsync("el => el.remove()").Wait();
+
+        ILocator informer = null;
+        Task waitForLocator = new Task(() =>
+        {
+            informer = FindInformer(page, "i#informer");
+        });
+        waitForLocator.RunSynchronously();
+        if (informer is not null)
+        {
+            Console.WriteLine(informer.InnerTextAsync().Result);
+        }
     
     var buttons = page.Locator("button").AllAsync().Result;
     ILocator grab,restart;
