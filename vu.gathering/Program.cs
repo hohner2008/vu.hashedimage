@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Microsoft.Playwright;
 using vu.core;
+using vu.gathering;
 
 ILocator FindInformer(IPage page, string query)
 {
@@ -8,6 +9,19 @@ ILocator FindInformer(IPage page, string query)
     informer = page.Locator(query);
     if ( informer is null ) FindInformer(page, query);
     return informer;
+}
+
+void SaveCapthchaInDatabase(IPage page)
+{
+    var captchaInput = page.Locator("input.l[type='text'][name='tmp']").AllAsync().Result;
+    if (captchaInput is not null && captchaInput.Count == 1)
+    {
+        var s = captchaInput[0].InputValueAsync().Result;
+    }
+    else
+    {
+        throw new NoCaptchaException("Need a valid captcha to input!!!");
+    }
 }
 
 String MainCaptchaGathering(IPage page)
@@ -95,9 +109,18 @@ String MainCaptchaGathering(IPage page)
             informer = FindInformer(page, "i#informer");
         });
         waitForLocator.RunSynchronously();
-        if (informer is not null)
+        if (informer is null)
         {
             Console.WriteLine(informer.InnerTextAsync().Result);
+        }
+        else
+        {
+            var inner = informer.InnerTextAsync().Result;
+            if (inner == "grab_clicked")
+            {
+                Console.WriteLine(inner);
+                SaveCapthchaInDatabase(page);
+            }
         }
     
     var buttons = page.Locator("button").AllAsync().Result;

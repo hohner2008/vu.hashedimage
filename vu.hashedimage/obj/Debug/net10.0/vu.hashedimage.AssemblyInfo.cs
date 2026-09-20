@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vu.hashedimage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0236af2fa662deb9237dd91d1a80cf400adf34a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ec357045113620d79348b271c55fd4ddd2e6ea1")]
 [assembly: System.Reflection.AssemblyProductAttribute("vu.hashedimage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vu.hashedimage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
