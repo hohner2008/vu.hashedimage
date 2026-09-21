@@ -3,6 +3,7 @@ using Microsoft.Playwright;
 using vu.core;
 using vu.gathering;
 
+
 ILocator FindInformer(IPage page, string query)
 {
     ILocator informer;
@@ -11,12 +12,27 @@ ILocator FindInformer(IPage page, string query)
     return informer;
 }
 
+byte[] LoadCaptcha(IPage page)
+{
+    var imgLocator = page.Locator("img").AllAsync().Result;
+    string? attributeValue = imgLocator[0].GetAttributeAsync("src").Result;
+    return null;
+}
+
 void SaveCapthchaInDatabase(IPage page)
 {
     var captchaInput = page.Locator("input.l[type='text'][name='tmp']").AllAsync().Result;
     if (captchaInput is not null && captchaInput.Count == 1)
     {
         var s = captchaInput[0].InputValueAsync().Result;
+        if (s == String.Empty)
+        {
+            throw new NoCaptchaException("Need a valid captcha to input!!!");
+        }
+        else
+        {
+            LoadCaptcha(page);
+        }
     }
     else
     {

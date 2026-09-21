@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vu.gathering")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ec357045113620d79348b271c55fd4ddd2e6ea1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b918681e67569426ce47409175a1c5e6923b7a51")]
 [assembly: System.Reflection.AssemblyProductAttribute("vu.gathering")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vu.gathering")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
