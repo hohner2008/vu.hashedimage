@@ -1,7 +1,12 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Drawing;
+using System.Net;
+using System.Runtime.CompilerServices;
 using Microsoft.Playwright;
+using SixLabors.ImageSharp.Formats;
 using vu.core;
 using vu.gathering;
+using vu.hashedimage;
+using Image = SixLabors.ImageSharp.Image;
 
 
 ILocator FindInformer(IPage page, string query)
@@ -12,11 +17,47 @@ ILocator FindInformer(IPage page, string query)
     return informer;
 }
 
-byte[] LoadCaptcha(IPage page)
+CaptchaResult LoadCaptcha(IPage page)
 {
     var imgLocator = page.Locator("img").AllAsync().Result;
     string? attributeValue = imgLocator[0].GetAttributeAsync("src").Result;
-    return null;
+    string? url = "https://" + new Uri(page.Url).Host +  attributeValue ;
+    byte[] data;
+    IImageFormat format;
+    
+    if (!string.IsNullOrEmpty(url))
+    {
+        var user = Environment.UserName;
+        var folder = Utils.GetDownloadFolder();
+        Image savedCaptcha = Image.Load("/home/lusa/limg.gif");
+        var imageFormat = Image.DetectFormat("/home/lusa/limg.gif");
+        using (var httpClient = new HttpClient())
+        {
+            //Issue the GET request to a URL and read the response into a 
+            //stream that can be used to load the image
+            var absoluteUrl = new Uri(new Uri(page.Url),url);
+            var t = httpClient.GetStreamAsync(absoluteUrl).WaitAsync(new CancellationToken(false));
+            var stream = t.Result;
+            Memory<byte> memory = new Memory<byte>(new byte[10000]);
+            ValueTask<int> res = stream.ReadAsync(memory);
+            var imageContent  = memory.ToArray();
+            File.WriteAllBytesAsync("/home/lusa/image.gif", imageContent).Wait();
+        }
+        var task = Image.LoadAsync(url); 
+        task.Wait();
+        Image image = task.Result;
+        using var client = new HttpClient();
+        data = client.GetByteArrayAsync(url).WaitAsync(new TimeSpan(1000000000)).Result;
+        format = Image.DetectFormat(new ReadOnlySpan<byte>(data));
+    }
+    else
+    {
+        // change to another exception
+        throw new NoCaptchaException("Need a valid captcha to input!!!");
+    }
+
+    string? text = "";
+    return new CaptchaResult(data,url,format,text);
 }
 
 void SaveCapthchaInDatabase(IPage page)
