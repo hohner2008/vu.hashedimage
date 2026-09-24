@@ -21,6 +21,9 @@ CaptchaResult LoadCaptcha(IPage page)
 {
     var imgLocator = page.Locator("img").AllAsync().Result;
     string? attributeValue = imgLocator[0].GetAttributeAsync("src").Result;
+    
+    imgLocator[0].ScreenshotAsync(new() { Path = "element.png" }).Wait();
+    
     string? url = "https://" + new Uri(page.Url).Host +  attributeValue ;
     byte[] data;
     IImageFormat format;

@@ -46,5 +46,5 @@ public class DownloadsWatcher
 
 public class FileDownloadedEventArgs : EventArgs
 {
-    public string Path { get; set; }
+    public string? Path { get; set; }
 }
