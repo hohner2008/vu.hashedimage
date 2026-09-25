@@ -11,7 +11,7 @@ public static class LocatorScreenshot
         get => _options;
     }
 
-    public static async  Task<byte[]> MakeScreenshot(ILocator l)
+    public static byte[] MakeScreenshot(ILocator l)
     {
         var task = l.ScreenshotAsync(_options).WaitAsync(new CancellationToken(false));
         task.Wait();
