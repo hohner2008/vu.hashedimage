@@ -11,8 +11,10 @@ public static class LocatorScreenshot
         get => _options;
     }
 
-    public static void MakeScreenshot(ILocator l)
+    public static async  Task<byte[]> MakeScreenshot(ILocator l)
     {
-        l.ScreenshotAsync(_options).Wait();
+        var task = l.ScreenshotAsync(_options).WaitAsync(new CancellationToken(false));
+        task.Wait();
+        return task.Result;
     }
 }
