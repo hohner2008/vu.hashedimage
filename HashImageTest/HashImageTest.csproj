@@ -8,9 +8,19 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="SixLabors.ImageSharp" Version="4.1.2" />
       <PackageReference Include="xunit.v3" Version="4.0.1" />
       <PackageReference Include="xunit.v3.assert" Version="4.0.1" />
-      <PackageReference Include="xunit.v3.extensibility.core" Version="4.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Playwright">
+        <HintPath>..\..\..\.nuget\packages\microsoft.playwright\1.61.0\lib\netstandard2.0\Microsoft.Playwright.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\vu.hashedimage\vu.hashedimage.csproj" />
     </ItemGroup>
 
 </Project>
