@@ -13,9 +13,19 @@
       <PackageReference Include="SixLabors.ImageSharp" Version="4.1.2" />
       <PackageReference Include="System.Drawing.Common" Version="10.0.12" />
       <PackageReference Include="vusharp.core" Version="0.2.1" />
-      <PackageReference Include="xunit.v3" Version="4.0.1" />
-      <PackageReference Include="xunit.v3.assert" Version="4.0.1" />
       <PackageReference Include="xunit.v3.extensibility.core" Version="4.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="obj\Debug\net10.0\vu.hashedimage.csproj.CoreCompileInputs.cache" />
+      <Content Include="obj\Debug\net10.0\vu.hashedimage.csproj.FileListAbsolute.txt" />
+      <Content Include="obj\Debug\net10.0\vu.hashedimage.dll" />
+      <Content Include="obj\Debug\net10.0\vu.hashedimage.pdb" />
+      <Content Include="obj\Debug\net10.0\vu.hashedimage.sourcelink.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Class1.cs" />
     </ItemGroup>
 
 </Project>

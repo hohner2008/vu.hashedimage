@@ -10,17 +10,22 @@ public class DownloadsWatcher
     public string FileName
     {
         get => fileName;
-        set => fileName = value ?? throw new ArgumentNullException(nameof(value));
+        set { fileName = value ?? throw new ArgumentNullException(nameof(value));
+            _watcher.Filter = fileName;
+        }
     }
 
     public event EventHandler<FileDownloadedEventArgs>? FileDownloaded;
     
     public DownloadsWatcher()
     {
-        _watcher = new FileSystemWatcher(Utils.GetDownloadFolder());
+        var path = Utils.GetDownloadFolder();
+        _watcher = new FileSystemWatcher(path);
+        _watcher.EnableRaisingEvents = true;
+        _watcher.Created += OnCreated;
     }
 
-    private void OnCreated(object sender, FileSystemEventArgs e)
+    public void OnCreated(object sender, FileSystemEventArgs e)
     {
         var path = e.FullPath;
         var currentFileName = Path.GetFileNameWithoutExtension(path);
@@ -42,9 +47,4 @@ public class DownloadsWatcher
         }
 
     }
-}
-
-public class FileDownloadedEventArgs : EventArgs
-{
-    public string? Path { get; set; }
 }

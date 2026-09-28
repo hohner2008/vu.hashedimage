@@ -4,17 +4,22 @@ namespace vu.hashedimage;
 
 public static class LocatorScreenshot
 {
-    private static LocatorScreenshotOptions _options = new LocatorScreenshotOptions();
+    private static LocatorScreenshotOptions _options;
     
     public static LocatorScreenshotOptions Options
     {
         get => _options;
     }
-
-    public static byte[] MakeScreenshot(ILocator l)
+    static LocatorScreenshot()
     {
-        var task = l.ScreenshotAsync(_options).WaitAsync(new CancellationToken(false));
-        task.Wait();
-        return task.Result;
+        _options = new LocatorScreenshotOptions();
+    }
+
+    public static async Task<byte[]> MakeScreenshot(ILocator? l)
+    {
+        
+        LocatorScreenshot.Options.Path = "screenshot.png"; 
+        return await l?.ScreenshotAsync(_options);
+        
     }
 }

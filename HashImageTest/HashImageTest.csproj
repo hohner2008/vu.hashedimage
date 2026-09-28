@@ -23,4 +23,15 @@
       <ProjectReference Include="..\vu.hashedimage\vu.hashedimage.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="data\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="data\limg.gif" />
+      <Content Include="data\limg.gif">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
