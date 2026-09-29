@@ -5,6 +5,15 @@ namespace vu.hashedimage;
 
 public static class Utils
 {
+    public static async Task<Memory<byte>> FileToMemoryAsync(string path)
+    {
+        FileStream stream = File.Open(path, FileMode.Open);
+        Memory<byte> buffer = new byte[stream.Length]; 
+        int count = await stream.ReadAsync(buffer);
+        stream.Close();
+        return buffer;
+    }
+    
     public static string GetDownloadFolder()
     {
         var user = Environment.UserName;
