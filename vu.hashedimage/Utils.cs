@@ -1,10 +1,34 @@
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
+using CoenM.ImageHash;
+using CoenM.ImageHash.HashAlgorithms;
+using static CoenM.ImageHash.ImageHashExtensions;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+
 
 namespace vu.hashedimage;
 
 public static class Utils
 {
+    // 16 bytes
+    public static byte[] ImageToMD5(string imagePath)
+    {
+        var hash = new AverageHash();
+        using var stream = File.OpenRead(imagePath);
+        Span<byte> destination = new Span<byte>(new byte[16]);
+            
+        var md5 = MD5.Create();
+        MD5.HashData(stream,destination);
+
+        return destination.ToArray();
+
+        //ulong avh = ImageHashing.ImageHashing.AverageHash(imagePath);
+
+
+    }
+    
     public static async Task<Memory<byte>> FileToMemoryAsync(string path)
     {
         FileStream stream = File.Open(path, FileMode.Open);
