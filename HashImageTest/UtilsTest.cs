@@ -14,5 +14,7 @@ public class UtilsTest
         var p = path + "limg.gif";
         
         byte[] hash = ImageToMD5(p);
+        var str = HastToUtf8(hash);
+        var count = str.Length;
     }
 }

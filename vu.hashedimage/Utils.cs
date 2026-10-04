@@ -12,6 +12,10 @@ namespace vu.hashedimage;
 
 public static class Utils
 {
+    public static string HastToUtf8(byte[] hash)
+    {
+        return System.Text.Encoding.UTF8.GetString(hash);
+    }
     // 16 bytes
     public static byte[] ImageToMD5(string imagePath)
     {
