@@ -20,4 +20,14 @@
       <ProjectReference Include="..\vu.hashedimage\vu.hashedimage.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="obj\Debug\net10.0\apphost" />
+      <Content Include="obj\Debug\net10.0\vu.gathe.33576BE7.Up2Date" />
+      <Content Include="obj\Debug\net10.0\vu.gathering.csproj.AssemblyReference.cache" />
+      <Content Include="obj\Debug\net10.0\vu.gathering.csproj.CoreCompileInputs.cache" />
+      <Content Include="obj\Debug\net10.0\vu.gathering.dll" />
+      <Content Include="obj\Debug\net10.0\vu.gathering.genruntimeconfig.cache" />
+      <Content Include="obj\Debug\net10.0\vu.gathering.pdb" />
+    </ItemGroup>
+
 </Project>

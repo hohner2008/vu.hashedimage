@@ -8,9 +8,10 @@
 
     <ItemGroup>
       <PackageReference Include="CoenM.ImageSharp.ImageHash" Version="1.0.0" />
+      <PackageReference Include="ImageHashing" Version="1.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.11" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
-      <PackageReference Include="SixLabors.ImageSharp" Version="4.1.2" />
+      <PackageReference Include="SixLabors.ImageSharp" Version="2.1.9" />
       <PackageReference Include="System.Drawing.Common" Version="10.0.12" />
       <PackageReference Include="vusharp.core" Version="0.2.1" />
       <PackageReference Include="xunit.v3.extensibility.core" Version="4.0.1" />
