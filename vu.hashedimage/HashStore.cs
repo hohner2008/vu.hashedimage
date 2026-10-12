@@ -12,9 +12,9 @@ public class HashStore: DbContext
         optionsBuilder.UseNpgsql(connectionString);
     }
     
-    public virtual BizarreCaptcha FindByHash(byte[] hash)
+    public virtual BizarreCaptcha FindByHash(string hash)
     {
-        var captcha = Captchas.Find(1,null,hash);
+        var captcha = Captchas.Where(h => h.StringHash  == hash).FirstOrDefault();
             
         return captcha;
     }
@@ -22,10 +22,34 @@ public class HashStore: DbContext
     public virtual void Save(BizarreCaptcha obj)
     {
         Database.EnsureCreated();
-        Captchas.Add(obj);
+        var entity = FindByHash(obj.StringHash);
+        if (entity is null)
+        {
+            Captchas.Add(obj);
+            SaveChanges();
+        }
+        else
+        {
+            throw new Exception("Hash already exists");
+        }
+    }
+
+    public virtual void Delete(BizarreCaptcha obj)
+    {
+        Remove(obj);
         SaveChanges();
     }
 
+    public virtual void UpdateEntity(BizarreCaptcha obj)
+    {
+        Update(obj);
+        SaveChanges();
+    }
+
+    public virtual List<BizarreCaptcha> GetAllRecords()
+    {
+        return Captchas.ToList<BizarreCaptcha>();
+    }
 
     public virtual async Task<bool> DeleteTables()
     {

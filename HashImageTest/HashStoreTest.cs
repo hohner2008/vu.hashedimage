@@ -36,7 +36,25 @@ public class HashStoreTest
         var store = new HashStore();
 
  
-        store.Save(captcha);;
+        //store.Save(captcha);
+
+        var obj =store.FindByHash(stringHash);
+
+        obj.Caption = "11111";
+        
+        store.UpdateEntity(obj);
+
+        //store.Delete(obj);
+        var i = 0;
+        for (i = 0; i < 10; i++)
+        {
+            captcha.Id += 100;
+            captcha.Caption = captcha.Caption + i.ToString();
+            captcha.StringHash = captcha.StringHash + i.ToString() +"100";
+            store.Save(captcha);
+        }
+
+        List<BizarreCaptcha> list = store.GetAllRecords();
     }
     
     

@@ -19,48 +19,37 @@ ILocator FindInformer(IPage page, string query)
 
 CaptchaResult LoadCaptcha(IPage page)
 {
+    var captchaPath = "";
+
+    
+    void GotCaptcha(object? sender, FileDownloadedEventArgs? arg)
+    {
+        captchaPath = arg?.Path;
+    }
+    var watcher = new DownloadsWatcher();
+    watcher.FileName = "limg.gif";
+    watcher.FileDownloaded += GotCaptcha;
+    
+    
     var imgLocator = page.Locator("img").AllAsync().Result;
     string? attributeValue = imgLocator[0].GetAttributeAsync("src").Result;
     
     imgLocator[0].ScreenshotAsync(new() { Path = "element.png" }).Wait();
     
     string? url = "https://" + new Uri(page.Url).Host +  attributeValue ;
-    byte[] data;
-    IImageFormat format;
     
-    if (!string.IsNullOrEmpty(url))
-    {
-        var user = Environment.UserName;
-        var folder = Utils.GetDownloadFolder();
-        Image savedCaptcha = Image.Load("/home/lusa/limg.gif");
-        var imageFormat = Image.DetectFormat("/home/lusa/limg.gif");
-        using (var httpClient = new HttpClient())
-        {
-            //Issue the GET request to a URL and read the response into a 
-            //stream that can be used to load the image
-            var absoluteUrl = new Uri(new Uri(page.Url),url);
-            var t = httpClient.GetStreamAsync(absoluteUrl).WaitAsync(new CancellationToken(false));
-            var stream = t.Result;
-            Memory<byte> memory = new Memory<byte>(new byte[10000]);
-            ValueTask<int> res = stream.ReadAsync(memory);
-            var imageContent  = memory.ToArray();
-            File.WriteAllBytesAsync("/home/lusa/image.gif", imageContent).Wait();
-        }
-        var task = Image.LoadAsync(url); 
-        task.Wait();
-        Image image = task.Result;
-        using var client = new HttpClient();
-        data = client.GetByteArrayAsync(url).WaitAsync(new TimeSpan(1000000000)).Result;
-        format = Image.DetectFormat(new ReadOnlySpan<byte>(data));
-    }
-    else
-    {
-        // change to another exception
-        throw new NoCaptchaException("Need a valid captcha to input!!!");
-    }
-
-    string? text = "";
-    return new CaptchaResult(data,url,format,text);
+    byte[] data;
+    
+    SpinWait.SpinUntil( () => !String.IsNullOrEmpty(captchaPath));
+    
+    Task<Memory<byte>> task = Utils.FileToMemoryAsync(captchaPath);
+    task.Wait();
+    data = task.Result.ToArray();
+    
+    var locators = page.Locator("input.l[type='text'][name='tmp']").AllAsync().Result;
+    var text = locators[0].InputValueAsync().Result;
+    
+    return new CaptchaResult(data,text);
 }
 
 void SaveCapthchaInDatabase(IPage page)
